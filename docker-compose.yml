@@ -1,0 +1,29 @@
+version: '2'
+services:
+  yk-master:
+    build: .
+    volumes:
+      - ~/hdfs-master:/tmp/storage
+      - ~:/exthome
+    ports:
+      - '9870:9870'
+      - '8088:8088'
+    environment:
+      RUN_MODE: yarn-master
+    depends_on:
+      - yk-slave-01
+      - yk-slave-02
+  yk-slave-01:
+    build: .
+    volumes:
+      - ~/hdfs-slave-01:/tmp/storage
+      - ~:/exthome
+    environment:
+      RUN_MODE: slave
+  yk-slave-02:
+    build: .
+    volumes:
+      - ~/hdfs-slave-02:/tmp/storage
+      - ~:/exthome
+    environment:
+      RUN_MODE: slave

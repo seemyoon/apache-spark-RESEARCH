@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>yarn.acl.enable</name>
+        <value>0</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.hostname</name>
+        <value>yk-master</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <!-- Memory config -->
+    <property>
+        <name>yarn.nodemanager.resource.memory-mb</name>
+        <value>5120</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.maximum-allocation-mb</name>
+        <value>4096</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.minimum-allocation-mb</name>
+        <value>256</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.vmem-check-enabled</name>
+        <value>false</value>
+    </property>
+    <!-- Processor config -->
+    <property>
+        <name>yarn.nodemanager.resource.cpu-vcores</name>
+        <value>4</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.maximum-allocation-vcores</name>
+        <value>4</value>
+    </property>
+    <!-- Placeholder for classpath config, injected by script later -->
+    <!-- {{yarn.application.classpath}} -->
+</configuration>
