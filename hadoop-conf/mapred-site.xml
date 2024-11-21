@@ -8,11 +8,11 @@
     <!-- Processor config -->
     <property>
         <name>mapreduce.map.cpu.vcores</name>
-        <value>1</value>
+        <value>2</value>
     </property>
     <property>
         <name>mapreduce.reduce.cpu.vcores</name>
-        <value>1</value>
+        <value>2</value>
     </property>
     <!-- Memory config -->
     <property>

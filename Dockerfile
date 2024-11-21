@@ -1,9 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:22.04
 
 # Установка Java, Python, SSH и дополнительные настройки
 RUN set -ex && \
 apt-get update && \
-apt-get install -y lsof openjdk-8-jre-headless openssh-server openssh-client python python3 python3-pip && \
+apt-get install -y lsof openjdk-8-jre-headless openssh-server openssh-client python3 python3-pip && \
 rm /bin/sh && \
 ln -sv /bin/bash /bin/sh && \
 echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su && \

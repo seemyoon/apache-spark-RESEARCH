@@ -4,6 +4,7 @@ services:
     build: .
     volumes:
       - ~/hdfs-master:/tmp/storage
+      - ./test:/tmp/test
       - ~:/exthome
     ports:
       - '9870:9870'
@@ -17,6 +18,7 @@ services:
     build: .
     volumes:
       - ~/hdfs-slave-01:/tmp/storage
+      - ./test:/tmp/test
       - ~:/exthome
     environment:
       RUN_MODE: slave
@@ -24,6 +26,7 @@ services:
     build: .
     volumes:
       - ~/hdfs-slave-02:/tmp/storage
+      - ./test:/tmp/test
       - ~:/exthome
     environment:
       RUN_MODE: slave
